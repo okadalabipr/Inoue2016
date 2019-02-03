@@ -6,8 +6,8 @@
 ## Requirement
 - **[Julia 1.0+](https://julialang.org)**
   - DifferentialEquations
-  - IJulia
   - PyPlot
+- **[Juno](http://junolab.org)**
 
 ## Installation
 

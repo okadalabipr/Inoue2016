@@ -44,5 +44,5 @@ function runSimulation()
     p::Vector{Float64} = setParamConst();
     u0::Vector{Float64} = initialValues();
 
-    return getTC(p,u0,sstime,simtime,p[delayrnae])
+    return getTC(p,u0,sstime,simtime,p[delayrnae]);
 end
