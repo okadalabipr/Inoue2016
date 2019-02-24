@@ -1,4 +1,4 @@
-const variable = [
+const F_V = [
   "B"# y(1);
   "M"# y(2);
   "BM"# y(3);
@@ -51,6 +51,6 @@ const variable = [
   "A20c"# y(47);
 ];
 
-for (index,value) in enumerate(variable)
+for (index,value) in enumerate(F_V)
   eval(Meta.parse("const $value=$index"));
 end

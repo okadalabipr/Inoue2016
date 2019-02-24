@@ -1,10 +1,10 @@
 using Printf;
 using DifferentialEquations;
 
-include("./model/setParamConst.jl");
-include("./model/setVarEnum.jl");
-include("./model/diffeq.jl");
-include("./model/initialValues.jl");
+include("model/f_parameter.jl");
+include("model/f_variable.jl");
+include("model/differential_equation.jl");
+include("model/initial_condition.jl");
 
 function ddesolve(diffeq::Function,u0::Vector{Float64},history::Vector{Float64},tspan,p::Vector{Float64},tau::Float64)
     h(p,t) = history;
@@ -41,8 +41,8 @@ function runSimulation()
     sstime::Float64 = 1000.0;
     simtime::Float64 = 360.0;
 
-    p::Vector{Float64} = setParamConst();
-    u0::Vector{Float64} = initialValues();
+    p::Vector{Float64} = f_params();
+    u0::Vector{Float64} = initial_values();
 
     return getTC(p,u0,sstime,simtime,p[delayrnae]);
 end

@@ -1,4 +1,4 @@
-const constant = [
+const F_P = [
     "kCp0"
     "kCpB0"
     "kCpM0"
@@ -203,12 +203,12 @@ const constant = [
     "term"
 ];
 
-for (index,value) in enumerate(constant)
+for (index,value) in enumerate(F_P)
     eval(Meta.parse("const $value=$index"));
 end
 
-function setParamConst()
-    p = zeros(length(constant))
+function f_params()
+    p = zeros(length(F_P))
 
     p[kCp0] = 1.000000e-04;
     p[kCpB0] = 1.000000e-04;
