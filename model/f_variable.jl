@@ -23,7 +23,7 @@ const F_V = [
   "IKKppC"# y(20);
   "IKKpp"# y(21);
   "IKKi"# y(22);
-  #(* NFkB module*) c:cytoplasm n:nucleos
+  #(* NFkB module*) c:cytoplasm n:nucleus
   "NFKBc"# y(23);
   "NFKBn"# y(24);
   "IKBac"# y(25);
