@@ -1,10 +1,10 @@
 # Inoue_et_al_2016
 Inoue, K. et al. Oscillation dynamics underlie functional switching of NF-κB for B-cell activation. npj Syst. Biol. Appl. 2, 16024 (2016). https://doi.org/10.1038/npjsba.2016.24
 
-## Requirement
+## Requirements
 - **[Julia 1.0+](https://julialang.org)**
   - DifferentialEquations
-  - PyPlot
+  - PyPlot (for general plotting)
 - **[Juno](http://junolab.org)**
 
 ## Installation
