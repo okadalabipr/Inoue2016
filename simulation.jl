@@ -6,7 +6,7 @@ include("model/f_variable.jl");
 include("model/differential_equation.jl");
 include("model/initial_condition.jl");
 
-function ddesolve(diffeq::Function,u0::Vector{Float64},history::Vector{Float64},tspan,p::Vector{Float64},tau::Float64)
+function solvedde(diffeq::Function,u0::Vector{Float64},history::Vector{Float64},tspan,p::Vector{Float64},tau::Float64)
     h(p,t) = history;
     lags = [tau];
     prob = DDEProblem(diffeq,u0,h,tspan,p;constant_lags=lags);
@@ -21,7 +21,7 @@ function getSS(p::Vector{Float64},u0::Vector{Float64},sstime::Float64,tau::Float
     param[term] = 1.0;
     history::Vector{Float64} = u0;
     tspan::Tuple{Float64,Float64} = (0.0,sstime);
-    sol = ddesolve(diffeq,u0,history,tspan,param,tau);
+    sol = solvedde(diffeq,u0,history,tspan,param,tau);
 
     return sol[:,end]
 end
@@ -32,7 +32,7 @@ function getTC(p::Vector{Float64},u0::Vector{Float64},sstime::Float64,simtime::F
     u1::Vector{Float64} = getSS(p,u0,sstime,tau);
     history::Vector{Float64} = u1;
     tspan::Tuple{Float64,Float64} = (0.0,simtime);
-    sol = ddesolve(diffeq,u1,history,tspan,param,tau);
+    sol = solvedde(diffeq,u1,history,tspan,param,tau);
 
     return sol
 end
