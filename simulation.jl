@@ -1,5 +1,5 @@
 using Printf;
-using DifferentialEquations;
+using DelayDiffEq;
 
 include("model/f_parameter.jl");
 include("model/f_variable.jl");

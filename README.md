@@ -3,7 +3,7 @@ Inoue, K. et al. Oscillation dynamics underlie functional switching of NF-κB fo
 
 ## Requirements
 - **[Julia 1.0+](https://julialang.org)**
-  - DifferentialEquations
+  - DelayDiffEq
   - PyPlot (for general plotting)
 - **[Juno](http://junolab.org)**
 
