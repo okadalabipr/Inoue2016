@@ -46,3 +46,5 @@ function runSimulation()
 
     return getTC(p,u0,sstime,simtime,p[delayrnae]);
 end
+
+sol = runSimulation();
