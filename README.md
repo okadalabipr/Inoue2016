@@ -3,15 +3,16 @@ Inoue, K. *et al.* Oscillation dynamics underlie functional switching of NF-κB 
 
 ## Requirements
 - **[Julia 1.0+](https://julialang.org)**
-  - [DelayDiffEq](https://github.com/JuliaDiffEq/DelayDiffEq.jl)
-  - [PyPlot](https://github.com/JuliaPy/PyPlot.jl)
-- **[Juno](http://junolab.org)**
+    - [DelayDiffEq](https://github.com/JuliaDiffEq/DelayDiffEq.jl)
+    - [PyPlot](https://github.com/JuliaPy/PyPlot.jl)
+    - [IJulia](https://github.com/JuliaLang/IJulia.jl)
 
 ## Run Simulation and View Results
 ```julia
 include("simulation.jl");
 include("plot_func.jl");
-savefig("./NFkBmodel.png",bbox_inches="tight");
+# savefig("./NFkBmodel.png",bbox_inches="tight");
+show();
 ```
 
 ## Installation
