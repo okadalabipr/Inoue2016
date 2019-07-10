@@ -9,12 +9,11 @@ Inoue, K. *et al.* Oscillation dynamics underlie functional switching of NF-κB 
 
 ## Run Simulation and View Results
 ```julia
-include("simulation.jl");
-include("plot_func.jl");
-# savefig("./NFkBmodel.png",bbox_inches="tight");
-show();
+include("Inoue_et_al_2016.jl")
+using .Inoue_et_al_2016
+runSim()
 ```
+![NFkBmodel](https://user-images.githubusercontent.com/31299606/60936877-9f0d6880-a309-11e9-8067-a7acaaccd694.png)
 
 ## Installation
-
     $ git clone https://github.com/okadalabipr/Inoue_et_al_2016.git
