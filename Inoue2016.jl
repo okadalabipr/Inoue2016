@@ -1,4 +1,4 @@
-module Inoue_et_al_2016
+module Inoue2016
 using PyPlot;
 
 export runSim
