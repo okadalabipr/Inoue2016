@@ -42,6 +42,5 @@ function plotFunc_timecourse(Sim::Module)
     xlabel("Time (min)");
     ylabel("NFκB activity \n (relative % max.)");
 
-    #show();
-    savefig("NFkBmodel.png",dpi=1200,bbox_inches="tight")
+    show();
 end

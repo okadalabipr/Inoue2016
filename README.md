@@ -13,7 +13,7 @@ include("Inoue2016.jl")
 using .Inoue2016
 runSim()
 ```
-![NFkBmodel](https://user-images.githubusercontent.com/31299606/60936877-9f0d6880-a309-11e9-8067-a7acaaccd694.png)
+![NFkB_dynamics](NFkB_dynamics.png)
 
 ## Installation
     $ git clone https://github.com/okadalabipr/Inoue2016.git
