@@ -1,5 +1,10 @@
 module Sim
-using ..Model
+include("./name2idx/parameters.jl")
+include("./name2idx/species.jl")
+include("./set_model.jl")
+
+using .C
+using .V
 using DelayDiffEq
 
 
@@ -42,7 +47,7 @@ end
 const sstime = 1000.0
 const simtime = 360.0
 
-p = f_params()
+p = param_values()
 u0 = initial_values()
 
 sol = get_time_course(p,u0,sstime,simtime,p[C.delayrnae])
