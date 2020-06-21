@@ -306,9 +306,9 @@ function diffeq(du,u,h,p,t)
 end
 
 
-function f_params()
+function param_values()
     
-    p = zeros(C.len_f_params)
+    p = zeros(C.NUM)
 
     p[C.kCp0] = 1.000000e-04
     p[C.kCpB0] = 1.000000e-04
@@ -520,7 +520,7 @@ end
 
 function initial_values()
 
-    u0 = zeros(V.len_f_vars)
+    u0 = zeros(V.NUM)
 
     u0[V.B] = 1.0 # B
     u0[V.M] = 1.0 # M

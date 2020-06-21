@@ -1,5 +1,5 @@
 module C
-const param_names = [
+const NAMES = [
     "kCp0"
     "kCpB0"
     "kCpM0"
@@ -202,12 +202,12 @@ const param_names = [
     "delayrnae"
     "X"
     "term"
-];
+]
 
-for (idx,name) in enumerate(param_names)
-    eval(Meta.parse("const $name = $idx"));
+for (idx,name) in enumerate(NAMES)
+    eval(Meta.parse("const $name = $idx"))
 end
 
-const len_f_params = length(param_names);
+const NUM = length(NAMES)
 
 end  # module
